@@ -4,13 +4,18 @@ This `graphql-yoga` example written in Typescript illustrates how you can have c
 over the structure of your **typeDef** and **resolver** files by using the 
 [`merge-graphql-schemas` utility library](https://github.com/okgrow/merge-graphql-schemas). 
 
+## Features
+- modular graphql schema
+- tslint
+- tesing using ava
+- code coverage using nyc
+
 ## Get Started
 
 **Clone the repository:**
 
 ```sh
-git clone https://github.com/graphcool/graphql-yoga.git
-cd graphql-yoga/examples/modular-resolvers
+git clone https://github.com/shashanktomar/graphql-typescript-boilerplate.git
 ```
 
 **Install dependencies and run the app:**
