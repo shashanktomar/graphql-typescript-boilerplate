@@ -1,10 +1,15 @@
 import { GraphQLServer } from 'graphql-yoga';
+import data from './connectors/data';
+import Users from './models/Users';
 import { default as resolvers } from './resolvers';
 import { default as typeDefs } from './typeDefs';
 
 const options = { port: 4004 };
 
 const server = new GraphQLServer({
+  context: {
+    Users: Users(data)
+  },
   resolvers,
   typeDefs
 });
