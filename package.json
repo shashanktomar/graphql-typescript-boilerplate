@@ -19,7 +19,8 @@
         "test:watch": "nyc --silent ava -w",
         "cov": "run-s build test:unit cov:html && opn coverage/index.html",
         "cov:html": "nyc report --reporter=html",
-        "cov:check": "nyc report && nyc check-coverage --lines 100 --functions 100 --branches 100"
+        "cov:check": "nyc report && nyc check-coverage --lines 100 --functions 100 --branches 100",
+        "release": "standard-version"
     },
     "dependencies": {
         "graphql": "^0.13.1",
@@ -30,6 +31,7 @@
         "@types/node": "^8.0.29",
         "ava": "^0.25.0",
         "copyfiles": "^2.0.0",
+        "cz-conventional-changelog": "^2.1.0",
         "nodemon": "^1.17.1",
         "npm-run-all": "^4.1.2",
         "nsp": "^3.2.1",
@@ -41,5 +43,10 @@
         "tslint-config-prettier": "^1.10.0",
         "tslint-immutable": "^4.5.3",
         "typescript": "2.7.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
 }
